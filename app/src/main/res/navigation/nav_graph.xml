@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph.xml"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/splashScreen"
+        tools:layout="@layout/screen_splash"
+        android:name="uz.gita.masterclassmb2024.screen.SplashScreen"
+        android:label="SplashScreen" >
+        <action
+            android:id="@+id/action_splashScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_sign_up"
+        android:id="@+id/signUpScreen"
+        android:name="uz.gita.masterclassmb2024.screen.signup.SignUpScreen"
+        android:label="SignUpScreen" >
+        <action
+            android:id="@+id/action_signUpScreen_to_signUpVerifyScreen"
+            app:destination="@id/signUpVerifyScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_sign_up_verify"
+        android:id="@+id/signUpVerifyScreen"
+        android:name="uz.gita.masterclassmb2024.screen.SignUpVerifyScreen"
+        android:label="SignUpVerifyScreen" >
+        <argument
+            android:name="token"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
